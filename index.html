@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CAMPUS BEATS</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h2 class="logo">SPOTIBAI</h2>
+
+        <nav>
+            <a class="active" href="#">⌂ Home</a>
+            <a href="#playlist">☷ Your Library</a>
+            <a href="#lyricsSection">♫ Lyrics</a>
+        </nav>
+
+        <div class="sidebar-section">
+
+            <h4>YOUR PLAYLISTS</h4>
+
+            <a href="#playlist">♫ My Favorite Songs</a>
+            <a href="#playlist">♫ All Songs</a>
+
+        </div>
+
+        <div class="sidebar-bottom">
+            <p>Made for music lovers.</p>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div class="navigation">
+                <button>‹</button>
+                <button>›</button>
+            </div>
+
+            <div class="profile">
+                ♫ Guest User
+            </div>
+
+        </header>
+
+
+        <!-- WELCOME -->
+
+        <section class="welcome">
+
+            <p class="subtitle">YOUR PERSONAL MUSIC SPACE</p>
+
+            <h1>
+                Good music.<br>
+                Good vibes.
+            </h1>
+
+            <p>Paminawa imong kanta nga ganahan.</p>
+
+        </section>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-container">
+
+            <span>⌕</span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search your favorite songs..."
+            >
+
+        </div>
+
+
+        <!-- PLAYLIST -->
+
+        <section class="playlist" id="playlist">
+
+            <div class="section-header">
+
+                <div>
+                    <p class="subtitle">YOUR COLLECTION</p>
+                    <h2>All Songs</h2>
+                </div>
+
+                <span id="songCount">10 SONGS</span>
+
+            </div>
+
+
+            <div class="song-heading">
+
+                <span>#</span>
+                <span>Title</span>
+                <span>Album</span>
+                <span>Play</span>
+
+            </div>
+
+
+            <div id="songList"></div>
+
+        </section>
+
+
+        <!-- LYRICS SECTION -->
+
+        <section class="lyrics-section" id="lyricsSection">
+
+            <p class="subtitle">FOLLOW THE MUSIC</p>
+
+            <h2>Song Lyrics</h2>
+
+            <p id="lyricsSongName" class="lyrics-song-name">
+                Select a song
+            </p>
+
+            <div id="lyricsContainer" class="lyrics-container">
+
+                <p>Select a song to view its lyrics.</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- BOTTOM MUSIC PLAYER -->
+
+    <footer class="player">
+
+
+        <!-- CURRENT SONG -->
+
+        <div class="current-song">
+
+            <div class="mini-cover" id="miniCover">
+                ♫
+            </div>
+
+            <div class="song-info">
+
+                <h4 id="currentTitle">Select a Song</h4>
+
+                <p id="currentArtist">CAMPUS BEATS</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTROLS -->
+
+        <div class="player-center">
+
+            <div class="controls">
+
+                <button id="shuffleBtn" title="Shuffle">⤨</button>
+
+                <button id="prevBtn" title="Previous">⏮</button>
+
+                <button id="playBtn" class="play-button" title="Play">
+                    ▶
+                </button>
+
+                <button id="nextBtn" title="Next">⏭</button>
+
+                <button id="repeatBtn" title="Repeat">↻</button>
+
+            </div>
+
+
+            <!-- PROGRESS -->
+
+            <div class="progress-container">
+
+                <span id="currentTime">0:00</span>
+
+                <input
+                    type="range"
+                    id="progressBar"
+                    value="0"
+                    min="0"
+                    max="100"
+                >
+
+                <span id="duration">0:00</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- VOLUME -->
+
+        <div class="volume-container">
+
+            <span>🔊</span>
+
+            <input
+                type="range"
+                id="volumeBar"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.7"
+            >
+
+        </div>
+
+    </footer>
+
+</div>
+
+
+<!-- AUDIO -->
+
+<audio id="audioPlayer"></audio>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="songs.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
